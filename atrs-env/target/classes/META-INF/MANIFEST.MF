@@ -1,0 +1,9 @@
+Manifest-Version: 1.0
+Implementation-Title: atrs-env
+Implementation-Version: 1.1.0.RELEASE
+Built-By: terafw0672
+Implementation-Vendor-Id: jp.co.ntt.atrs
+Build-Jdk: 1.8.0_121
+Created-By: Maven Integration for Eclipse
+Implementation-Vendor: terasoluna.org
+

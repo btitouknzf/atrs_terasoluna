@@ -1,0 +1,63 @@
+http://localhost:18080/atrs/ticket/search?topForm
+↓
+jp.co.ntt.atrs.app.a0 IndexController.java
+IndexController
+return "redirect:/ticket/search?topForm"
+↓
+jp.co.ntt.atrs.app.b1 TicketSerchController.java
+searchTopForm
+return "A0/top"
+↓
+A0/tom.jsp
+<%@ include file="../B1/flightSearchForm.jsp" %>
+↓
+B1/flightSerchForm.jsp
+<form id="flights-search-form" class="form-horizontal" action="${pageContext.request.contextPath}/ticket/search" method="get">
+<spring:nestedPath path="ticketSearchForm"> ※空席照会フォーム
+<input type="submit" id="flights-search-button" class="btn btn-primary" name="flightForm" value="照会">
+↓
+jp.co.ntt.atrs.app.b1 TicketSerchController.java
+searchFlightForm
+{
+	ticketSearchHelper.createFlightSearchOutputDto()
+}
+	↓
+	jp.co.ntt.atrs.app.b1 TicketSearchHelper.java
+	createFlightSearchOutputDto()
+	outputDto.setEndingPeriod(ticketSharedService.getSearchLimitDate().toDate());
+		↓
+		jp.co.ntt.atrs.domain.service.b0 
+		interface TicketSharedService
+		LocalDate getSearchLimitDate();
+		↓
+		jp.co.ntt.atrs.domain.service.b0 TicketSharedServiceImpl implements TicketSharedService
+		LocalDate getSearchLimitDate()
+		return limitDate;
+		↓
+	return outputDto;
+	↓
+return "B1/flightSearch";
+↓
+B1/flightSearch.jsp
+<script src="${pageContext.request.contextPath}/resources/js/flight-search.js"></script>
+↓
+	this.update = function (param)
+	空席照会テーブルをAjaxで取得したデータを用いて更新する
+	url: contextPath + '/api/flights'
+	done(function (data)
+	↓
+		jp.co.ntt.atrs.app.b1 FlightsApiController.java
+		List<FlightVacantInfoDto> getFlights
+		ticketSearchService.searchFlight(searchCriteriaDto);
+			↓
+			ドメイン層処理へ
+			↓
+		return flights
+		↓
+	data
+	↓
+<script type="text/template" id="flights-table-template">
+<table id="outward-flights-table" class="flights-table">
+   <thead><tr></tr></thead>
+   <tbody><tr></tr></tbody>
+</table>
