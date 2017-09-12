@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<dataset>
+  <fare_type fare_type_cd="ED" fare_type_name="早期割" discount_rate="30" rsrv_available_start_day_num="60" rsrv_available_end_day_num="30" passenger_min_num="1" display_order="5" />
+  <fare_type fare_type_cd="GD" fare_type_name="グループ割" discount_rate="30" rsrv_available_start_day_num="60" rsrv_available_end_day_num="1" passenger_min_num="3" display_order="7" />
+  <fare_type fare_type_cd="LD" fare_type_name="レディース割" discount_rate="30" rsrv_available_start_day_num="60" rsrv_available_end_day_num="1" passenger_min_num="1" display_order="6" />
+  <fare_type fare_type_cd="OW" fare_type_name="片道運賃" discount_rate="0" rsrv_available_start_day_num="90" rsrv_available_end_day_num="0" passenger_min_num="1" display_order="1" />
+  <fare_type fare_type_cd="RD1" fare_type_name="予約割1" discount_rate="10" rsrv_available_start_day_num="60" rsrv_available_end_day_num="1" passenger_min_num="1" display_order="3" />
+  <fare_type fare_type_cd="RD7" fare_type_name="予約割7" discount_rate="20" rsrv_available_start_day_num="60" rsrv_available_end_day_num="7" passenger_min_num="1" display_order="4" />
+  <fare_type fare_type_cd="RT" fare_type_name="往復運賃" discount_rate="5" rsrv_available_start_day_num="90" rsrv_available_end_day_num="0" passenger_min_num="1" display_order="2" />
+  <fare_type fare_type_cd="SOW" fare_type_name="特別片道運賃" discount_rate="0" rsrv_available_start_day_num="90" rsrv_available_end_day_num="0" passenger_min_num="1" display_order="100" />
+  <fare_type fare_type_cd="SRD" fare_type_name="特別予約割" discount_rate="10" rsrv_available_start_day_num="60" rsrv_available_end_day_num="1" passenger_min_num="1" display_order="102" />
+  <fare_type fare_type_cd="SRT" fare_type_name="特別往復運賃" discount_rate="5" rsrv_available_start_day_num="90" rsrv_available_end_day_num="0" passenger_min_num="1" display_order="101" />
+</dataset>

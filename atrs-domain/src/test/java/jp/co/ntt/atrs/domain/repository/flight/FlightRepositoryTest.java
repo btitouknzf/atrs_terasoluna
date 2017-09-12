@@ -75,8 +75,8 @@ public class FlightRepositoryTest {
 		Date depDate = new Date();
 		try{
 			//depDate
-			String strDate = "2017-09-05";
-			SimpleDateFormat sdFormat = new SimpleDateFormat(strDate);
+			String strDate = "2017-09-13";
+			SimpleDateFormat sdFormat = new SimpleDateFormat("yyyy-MM-dd");
 			depDate = sdFormat.parse(strDate);
 		}catch (ParseException e){
 			e.printStackTrace();
@@ -96,16 +96,16 @@ public class FlightRepositoryTest {
 		
 		//fareTypeList
 		List<FareTypeCd> fareTypeList = new ArrayList<>();
-		fareTypeList.add(FareTypeCd.ED);
-		fareTypeList.add(FareTypeCd.GD);
-		fareTypeList.add(FareTypeCd.LD);
-		fareTypeList.add(FareTypeCd.OW);
 		
+		for(FareTypeCd faretype : FareTypeCd.values()){
+			fareTypeList.add(faretype);
+		}
+			
 		VacantSeatSearchCriteriaDto testData = new VacantSeatSearchCriteriaDto(depDate, route, boardingClass, beforeDayNum, fareTypeList);
 		
 		List<Flight> actual = target.findByVacantSeatSearchCriteria(testData);
 		
-		assertThat(actual.size(), is(0));
+		assertThat(actual.size(), is(90));
 	}
 	
 	
