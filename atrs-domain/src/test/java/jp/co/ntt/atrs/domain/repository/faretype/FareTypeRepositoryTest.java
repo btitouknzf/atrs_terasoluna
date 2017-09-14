@@ -4,6 +4,7 @@ import static org.hamcrest.CoreMatchers.is;
 import static org.junit.Assert.*;
 
 import java.io.File;
+import java.io.FileInputStream;
 import java.util.List;
 
 import javax.inject.Inject;
@@ -15,6 +16,7 @@ import org.dbunit.database.DatabaseConfig;
 import org.dbunit.dataset.IDataSet;
 import org.dbunit.dataset.ITable;
 import org.dbunit.dataset.xml.FlatXmlDataSet;
+import org.dbunit.dataset.xml.FlatXmlDataSetBuilder;
 import org.dbunit.ext.mysql.MySqlDataTypeFactory;
 import org.junit.Before;
 import org.junit.Test;
@@ -48,7 +50,8 @@ public class FareTypeRepositoryTest extends DataSourceBasedDBTestCase {
 		IDataSet databaseDataSet = getConnection().createDataSet();
 		ITable actualTable = databaseDataSet.getTable("fare_type");
 		
-		IDataSet expectedDataSet = new FlatXmlDataSet(new File(RESOURCE_DIR + "afterupdate_Unitdata.xml"));
+		//IDataSet expectedDataSet = new FlatXmlDataSet(new File(RESOURCE_DIR + "afterupdate_Unitdata.xml"));
+		IDataSet expectedDataSet =new FlatXmlDataSetBuilder().build(new File(RESOURCE_DIR + "afterupdate_Unitdata.xml")); 
 		ITable expectedTable = expectedDataSet.getTable("fare_type");
 		
 		Assertion.assertEquals(expectedTable, actualTable);
@@ -67,7 +70,8 @@ public class FareTypeRepositoryTest extends DataSourceBasedDBTestCase {
 	
 	@Override
 	protected IDataSet getDataSet() throws Exception {
-		return new FlatXmlDataSet(new File(RESOURCE_DIR + "test_data.xml"));
+		//return new FlatXmlDataSet(new File(RESOURCE_DIR + "test_data.xml"));
+		return new FlatXmlDataSetBuilder().build(new FileInputStream(RESOURCE_DIR + "test_data.xml"));
 	}
 	
 	@Test
