@@ -99,7 +99,7 @@
   <bean id="handlerExceptionResolverLoggingInterceptor" class="org.terasoluna.gfw.web.exception.HandlerExceptionResolverLoggingInterceptor">
     <property name="exceptionLogger" ref="exceptionLogger" />
   </bean>
-
+  
   <aop:config>
     <aop:advisor advice-ref="handlerExceptionResolverLoggingInterceptor"
       pointcut="execution(* org.springframework.web.servlet.HandlerExceptionResolver.resolveException(..))" />
