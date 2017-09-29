@@ -1,0 +1,376 @@
+date:2017-09-27 17:28:16	thread:main	user:	X-Track:	level:DEBUG	logger:j.c.n.a.d.r.b.BoardingClassRepository.findAll   	message:==>  Preparing: SELECT boarding_class_cd, boarding_class_name, extra_charge FROM boarding_class 
+date:2017-09-27 17:28:16	thread:main	user:	X-Track:	level:DEBUG	logger:j.c.n.a.d.r.b.BoardingClassRepository.findAll   	message:==> Parameters: 
+date:2017-09-27 17:28:16	thread:main	user:	X-Track:	level:DEBUG	logger:jdbc.sqltiming                                  	message: sun.reflect.NativeMethodAccessorImpl.invoke0(NativeMethodAccessorImpl.java:-2)
+1. SELECT
+        boarding_class_cd,
+        boarding_class_name,
+        extra_charge
+    FROM
+        boarding_class {executed in 20 msec}
+date:2017-09-27 17:28:16	thread:main	user:	X-Track:	level:DEBUG	logger:j.c.n.a.d.r.b.BoardingClassRepository.findAll   	message:<==      Total: 2
+date:2017-09-27 17:28:16	thread:main	user:	X-Track:	level:DEBUG	logger:j.c.n.a.d.r.faretype.FareTypeRepository.findAll 	message:==>  Preparing: SELECT fare_type_cd, fare_type_name, discount_rate, rsrv_available_start_day_num, rsrv_available_end_day_num, passenger_min_num FROM fare_type 
+date:2017-09-27 17:28:16	thread:main	user:	X-Track:	level:DEBUG	logger:j.c.n.a.d.r.faretype.FareTypeRepository.findAll 	message:==> Parameters: 
+date:2017-09-27 17:28:16	thread:main	user:	X-Track:	level:DEBUG	logger:jdbc.sqltiming                                  	message: sun.reflect.NativeMethodAccessorImpl.invoke0(NativeMethodAccessorImpl.java:-2)
+2. SELECT
+        fare_type_cd,
+        fare_type_name,
+        discount_rate,
+        rsrv_available_start_day_num,
+        rsrv_available_end_day_num,
+        passenger_min_num
+    FROM
+        fare_type {executed in 1 msec}
+date:2017-09-27 17:28:16	thread:main	user:	X-Track:	level:DEBUG	logger:j.c.n.a.d.r.faretype.FareTypeRepository.findAll 	message:<==      Total: 10
+date:2017-09-27 17:28:16	thread:main	user:	X-Track:	level:DEBUG	logger:j.c.n.a.d.r.f.F.findAllFlightMaster             	message:==>  Preparing: SELECT fm.flight_name, fm.departure_time, fm.arrival_time, fm.craft_type, r.route_no, r.basic_fare, a_dep.airport_cd AS dep_airport_cd, a_dep.airport_name AS dep_airport_name, a_arr.airport_cd AS aar_airport_cd, a_arr.airport_name AS aar_airport_name FROM flight_master fm, route r, airport a_dep, airport a_arr WHERE fm.route_no = r.route_no AND r.dep_airport_cd = a_dep.airport_cd AND r.arr_airport_cd = a_arr.airport_cd 
+date:2017-09-27 17:28:16	thread:main	user:	X-Track:	level:DEBUG	logger:j.c.n.a.d.r.f.F.findAllFlightMaster             	message:==> Parameters: 
+date:2017-09-27 17:28:16	thread:main	user:	X-Track:	level:DEBUG	logger:jdbc.sqltiming                                  	message: sun.reflect.NativeMethodAccessorImpl.invoke0(NativeMethodAccessorImpl.java:-2)
+3. SELECT
+        fm.flight_name,
+        fm.departure_time,
+        fm.arrival_time,
+        fm.craft_type,
+        r.route_no,
+        r.basic_fare,
+        a_dep.airport_cd AS dep_airport_cd,
+        a_dep.airport_name AS dep_airport_name,
+        a_arr.airport_cd AS aar_airport_cd,
+        a_arr.airport_name AS aar_airport_name
+    FROM
+        flight_master fm,
+        route r,
+        airport a_dep,
+        airport a_arr
+    WHERE 
+        fm.route_no = r.route_no
+    AND
+        r.dep_airport_cd = a_dep.airport_cd
+    AND
+        r.arr_airport_cd = a_arr.airport_cd {executed in 8 msec}
+date:2017-09-27 17:28:16	thread:main	user:	X-Track:	level:DEBUG	logger:j.c.n.a.d.r.f.F.findAllFlightMaster             	message:<==      Total: 126
+date:2017-09-27 17:28:16	thread:main	user:	X-Track:	level:DEBUG	logger:j.c.n.a.d.r.peaktime.PeakTimeRepository.findAll 	message:==>  Preparing: SELECT peak_time_cd, peak_start_date, peak_end_date, multiplication_ratio FROM peak_time 
+date:2017-09-27 17:28:16	thread:main	user:	X-Track:	level:DEBUG	logger:j.c.n.a.d.r.peaktime.PeakTimeRepository.findAll 	message:==> Parameters: 
+date:2017-09-27 17:28:16	thread:main	user:	X-Track:	level:DEBUG	logger:jdbc.sqltiming                                  	message: sun.reflect.NativeMethodAccessorImpl.invoke0(NativeMethodAccessorImpl.java:-2)
+4. SELECT
+        peak_time_cd,
+        peak_start_date,
+        peak_end_date,
+        multiplication_ratio
+    FROM
+        peak_time {executed in 2 msec}
+date:2017-09-27 17:28:16	thread:main	user:	X-Track:	level:DEBUG	logger:j.c.n.a.d.r.peaktime.PeakTimeRepository.findAll 	message:<==      Total: 16
+date:2017-09-27 17:28:16	thread:main	user:	X-Track:	level:DEBUG	logger:j.c.n.a.d.r.route.RouteRepository.findAll       	message:==>  Preparing: SELECT r.route_no, r.basic_fare, a_dep.airport_cd AS dep_airport_cd, a_dep.airport_name AS dep_airport_name, a_arr.airport_cd AS aar_airport_cd, a_arr.airport_name AS aar_airport_name FROM route r, airport a_dep, airport a_arr WHERE r.dep_airport_cd = a_dep.airport_cd AND r.arr_airport_cd = a_arr.airport_cd 
+date:2017-09-27 17:28:16	thread:main	user:	X-Track:	level:DEBUG	logger:j.c.n.a.d.r.route.RouteRepository.findAll       	message:==> Parameters: 
+date:2017-09-27 17:28:16	thread:main	user:	X-Track:	level:DEBUG	logger:jdbc.sqltiming                                  	message: sun.reflect.NativeMethodAccessorImpl.invoke0(NativeMethodAccessorImpl.java:-2)
+5. SELECT
+        r.route_no,
+        r.basic_fare,
+        a_dep.airport_cd AS dep_airport_cd,
+        a_dep.airport_name AS dep_airport_name,
+        a_arr.airport_cd AS aar_airport_cd,
+        a_arr.airport_name AS aar_airport_name
+    FROM
+        route r,
+        airport a_dep,
+        airport a_arr
+    WHERE
+        r.dep_airport_cd = a_dep.airport_cd
+    AND
+        r.arr_airport_cd = a_arr.airport_cd {executed in 2 msec}
+date:2017-09-27 17:28:16	thread:main	user:	X-Track:	level:DEBUG	logger:j.c.n.a.d.r.route.RouteRepository.findAll       	message:<==      Total: 20
+date:2017-09-27 17:28:17	thread:main	user:	X-Track:	level:WARN 	logger:org.dozer.config.GlobalSettings                 	message:Dozer configuration file not found: dozer.properties.  Using defaults for all Dozer global properties.
+date:2017-09-27 17:28:17	thread:main	user:	X-Track:	level:DEBUG	logger:j.c.n.a.domain.common.codelist.AirportCodeList  	message:refresh codelist codeListId=CL_AIRPORT
+date:2017-09-27 17:28:17	thread:main	user:	X-Track:	level:DEBUG	logger:jdbc.sqltiming                                  	message: org.springframework.jdbc.core.JdbcTemplate$1QueryStatementCallback.doInStatement(JdbcTemplate.java:454)
+6. SELECT airport_cd,airport_name,display_order FROM airport order by display_order ASC {executed in 1 msec}
+date:2017-09-27 17:28:17	thread:main	user:	X-Track:	level:DEBUG	logger:org.terasoluna.gfw.common.codelist.JdbcCodeList 	message:refresh codelist codeListId=CL_BOARDINGCLASS
+date:2017-09-27 17:28:17	thread:main	user:	X-Track:	level:DEBUG	logger:jdbc.sqltiming                                  	message: org.springframework.jdbc.core.JdbcTemplate$1QueryStatementCallback.doInStatement(JdbcTemplate.java:454)
+7. SELECT boarding_class_cd,boarding_class_name FROM boarding_class ORDER BY display_order ASC {executed in 1 msec}
+date:2017-09-27 17:28:17	thread:main	user:	X-Track:	level:DEBUG	logger:org.terasoluna.gfw.common.codelist.JdbcCodeList 	message:refresh codelist codeListId=CL_FARETYPE
+date:2017-09-27 17:28:17	thread:main	user:	X-Track:	level:DEBUG	logger:jdbc.sqltiming                                  	message: org.springframework.jdbc.core.JdbcTemplate$1QueryStatementCallback.doInStatement(JdbcTemplate.java:454)
+8. SELECT fare_type_cd, fare_type_name FROM fare_type ORDER BY display_order ASC {executed in 0 msec}
+date:2017-09-27 17:28:17	thread:main	user:	X-Track:	level:DEBUG	logger:org.terasoluna.gfw.common.codelist.JdbcCodeList 	message:refresh codelist codeListId=CL_CREDITTYPE
+date:2017-09-27 17:28:17	thread:main	user:	X-Track:	level:DEBUG	logger:jdbc.sqltiming                                  	message: org.springframework.jdbc.core.JdbcTemplate$1QueryStatementCallback.doInStatement(JdbcTemplate.java:454)
+9. SELECT credit_type_cd, credit_firm FROM credit_type ORDER BY display_order ASC {executed in 1 msec}
+date:2017-09-27 17:28:17	thread:main	user:	X-Track:	level:DEBUG	logger:o.t.gfw.web.codelist.CodeListInterceptor        	message:registered codeList : [CL_CREDITMONTH, CL_FLIGHTTYPE, CL_BOARDINGCLASS, CL_CREDITYEAR, CL_CREDITTYPE, CL_FARETYPE, CL_AIRPORT, CL_GENDER]
+date:2017-09-27 17:28:18	thread:main	user:	X-Track:	level:INFO 	logger:o.s.w.s.m.m.a.RequestMappingHandlerMapping      	message:Mapped "{[/api/auth/status],methods=[GET]}" onto public org.springframework.http.ResponseEntity<java.lang.Object> jp.co.ntt.atrs.app.a0.AuthApiController.getStatus(jp.co.ntt.atrs.domain.service.a1.AtrsUserDetails)
+date:2017-09-27 17:28:18	thread:main	user:	X-Track:	level:INFO 	logger:o.s.w.s.m.m.a.RequestMappingHandlerMapping      	message:Mapped "{[/]}" onto public java.lang.String jp.co.ntt.atrs.app.a0.IndexController.homePage()
+date:2017-09-27 17:28:18	thread:main	user:	X-Track:	level:INFO 	logger:o.s.w.s.m.m.a.RequestMappingHandlerMapping      	message:Mapped "{[/api/member/available],methods=[GET]}" onto public org.springframework.http.ResponseEntity<java.lang.Object> jp.co.ntt.atrs.app.a0.MemberApiController.getAvailable(java.lang.String)
+date:2017-09-27 17:28:18	thread:main	user:	X-Track:	level:INFO 	logger:o.s.w.s.m.m.a.RequestMappingHandlerMapping      	message:Mapped "{[/auth/login]}" onto public java.lang.String jp.co.ntt.atrs.app.a1.AuthLoginController.loginForm()
+date:2017-09-27 17:28:18	thread:main	user:	X-Track:	level:INFO 	logger:o.s.w.s.m.m.a.RequestMappingHandlerMapping      	message:Mapped "{[/api/flights],methods=[GET]}" onto public java.util.List<jp.co.ntt.atrs.domain.service.b1.FlightVacantInfoDto> jp.co.ntt.atrs.app.b1.FlightsApiController.getFlights(jp.co.ntt.atrs.app.b1.FlightSearchCriteriaForm)
+date:2017-09-27 17:28:18	thread:main	user:	X-Track:	level:INFO 	logger:o.s.w.s.m.m.a.RequestMappingHandlerMapping      	message:Mapped "{[/ticket/search],methods=[GET],params=[topForm]}" onto public java.lang.String jp.co.ntt.atrs.app.b1.TicketSearchController.searchTopForm(org.springframework.ui.Model)
+date:2017-09-27 17:28:18	thread:main	user:	X-Track:	level:INFO 	logger:o.s.w.s.m.m.a.RequestMappingHandlerMapping      	message:Mapped "{[/ticket/search],methods=[GET],params=[form]}" onto public java.lang.String jp.co.ntt.atrs.app.b1.TicketSearchController.searchForm(org.springframework.ui.Model)
+date:2017-09-27 17:28:18	thread:main	user:	X-Track:	level:INFO 	logger:o.s.w.s.m.m.a.RequestMappingHandlerMapping      	message:Mapped "{[/ticket/search],methods=[GET],params=[flightForm]}" onto public java.lang.String jp.co.ntt.atrs.app.b1.TicketSearchController.searchFlightForm(jp.co.ntt.atrs.app.b1.TicketSearchForm,org.springframework.validation.BindingResult,org.springframework.ui.Model)
+date:2017-09-27 17:28:18	thread:main	user:	X-Track:	level:INFO 	logger:o.s.w.s.m.m.a.RequestMappingHandlerMapping      	message:Mapped "{[/ticket/search],methods=[GET],params=[redo]}" onto public java.lang.String jp.co.ntt.atrs.app.b1.TicketSearchController.searchRedo(jp.co.ntt.atrs.app.b1.TicketSearchForm,jp.co.ntt.atrs.app.b0.ReservationFlightForm,org.springframework.ui.Model)
+date:2017-09-27 17:28:18	thread:main	user:	X-Track:	level:INFO 	logger:o.s.w.s.m.m.a.RequestMappingHandlerMapping      	message:Mapped "{[/ticket/search],methods=[POST]}" onto public java.lang.String jp.co.ntt.atrs.app.b1.TicketSearchController.searchSelect(jp.co.ntt.atrs.app.b1.TicketSearchForm,jp.co.ntt.atrs.app.b0.ReservationFlightForm,org.springframework.validation.BindingResult,org.springframework.ui.Model,org.springframework.web.servlet.mvc.support.RedirectAttributes)
+date:2017-09-27 17:28:18	thread:main	user:	X-Track:	level:INFO 	logger:o.s.w.s.m.m.a.RequestMappingHandlerMapping      	message:Mapped "{[/ticket/reserve],methods=[GET],params=[complete]}" onto public java.lang.String jp.co.ntt.atrs.app.b2.TicketReserveController.reserveComplete()
+date:2017-09-27 17:28:18	thread:main	user:	X-Track:	level:INFO 	logger:o.s.w.s.m.m.a.RequestMappingHandlerMapping      	message:Mapped "{[/ticket/reserve],methods=[GET],params=[form]}" onto public java.lang.String jp.co.ntt.atrs.app.b2.TicketReserveController.reserveForm(jp.co.ntt.atrs.app.b0.ReservationFlightForm,jp.co.ntt.atrs.domain.service.a1.AtrsUserDetails,org.springframework.ui.Model)
+date:2017-09-27 17:28:18	thread:main	user:	X-Track:	level:INFO 	logger:o.s.w.s.m.m.a.RequestMappingHandlerMapping      	message:Mapped "{[/ticket/reserve],methods=[POST],params=[redo]}" onto public java.lang.String jp.co.ntt.atrs.app.b2.TicketReserveController.reserveRedo(jp.co.ntt.atrs.app.b2.TicketReserveForm,org.springframework.ui.Model)
+date:2017-09-27 17:28:18	thread:main	user:	X-Track:	level:INFO 	logger:o.s.w.s.m.m.a.RequestMappingHandlerMapping      	message:Mapped "{[/ticket/reserve],methods=[POST]}" onto public java.lang.String jp.co.ntt.atrs.app.b2.TicketReserveController.reserve(jp.co.ntt.atrs.app.b2.TicketReserveForm,org.springframework.validation.BindingResult,org.springframework.ui.Model,org.springframework.web.servlet.mvc.support.RedirectAttributes) throws jp.co.ntt.atrs.app.common.exception.BadRequestException
+date:2017-09-27 17:28:18	thread:main	user:	X-Track:	level:INFO 	logger:o.s.w.s.m.m.a.RequestMappingHandlerMapping      	message:Mapped "{[/ticket/reserve],methods=[POST],params=[confirm]}" onto public java.lang.String jp.co.ntt.atrs.app.b2.TicketReserveController.reserveConfirm(jp.co.ntt.atrs.app.b2.TicketReserveForm,org.springframework.validation.BindingResult,org.springframework.ui.Model) throws jp.co.ntt.atrs.app.common.exception.BadRequestException
+date:2017-09-27 17:28:18	thread:main	user:	X-Track:	level:INFO 	logger:o.s.w.s.m.m.a.RequestMappingHandlerMapping      	message:Mapped "{[/ticket/reserve],methods=[GET],params=[fail]}" onto public java.lang.String jp.co.ntt.atrs.app.b2.TicketReserveController.reserveFail()
+date:2017-09-27 17:28:18	thread:main	user:	X-Track:	level:INFO 	logger:o.s.w.s.m.m.a.RequestMappingHandlerMapping      	message:Mapped "{[/ticket/reserve],methods=[POST],params=[backToSearch]}" onto public java.lang.String jp.co.ntt.atrs.app.b2.TicketReserveController.reserveBackToSearch(jp.co.ntt.atrs.app.b0.ReservationFlightForm,org.springframework.ui.Model,org.springframework.web.servlet.mvc.support.RedirectAttributes)
+date:2017-09-27 17:28:18	thread:main	user:	X-Track:	level:INFO 	logger:o.s.w.s.m.m.a.RequestMappingHandlerMapping      	message:Mapped "{[/member/register],methods=[POST]}" onto public java.lang.String jp.co.ntt.atrs.app.c1.MemberRegisterController.register(jp.co.ntt.atrs.app.c1.MemberRegisterForm,org.springframework.validation.BindingResult,org.springframework.ui.Model,org.springframework.web.servlet.mvc.support.RedirectAttributes)
+date:2017-09-27 17:28:18	thread:main	user:	X-Track:	level:INFO 	logger:o.s.w.s.m.m.a.RequestMappingHandlerMapping      	message:Mapped "{[/member/register],methods=[POST],params=[confirm]}" onto public java.lang.String jp.co.ntt.atrs.app.c1.MemberRegisterController.registerConfirm(jp.co.ntt.atrs.app.c1.MemberRegisterForm,org.springframework.validation.BindingResult,org.springframework.ui.Model)
+date:2017-09-27 17:28:18	thread:main	user:	X-Track:	level:INFO 	logger:o.s.w.s.m.m.a.RequestMappingHandlerMapping      	message:Mapped "{[/member/register],methods=[POST],params=[redo]}" onto public java.lang.String jp.co.ntt.atrs.app.c1.MemberRegisterController.registerRedo(jp.co.ntt.atrs.app.c1.MemberRegisterForm,org.springframework.ui.Model)
+date:2017-09-27 17:28:18	thread:main	user:	X-Track:	level:INFO 	logger:o.s.w.s.m.m.a.RequestMappingHandlerMapping      	message:Mapped "{[/member/register],methods=[GET],params=[form]}" onto public java.lang.String jp.co.ntt.atrs.app.c1.MemberRegisterController.registerForm(org.springframework.ui.Model)
+date:2017-09-27 17:28:18	thread:main	user:	X-Track:	level:INFO 	logger:o.s.w.s.m.m.a.RequestMappingHandlerMapping      	message:Mapped "{[/member/register],methods=[GET],params=[complete]}" onto public java.lang.String jp.co.ntt.atrs.app.c1.MemberRegisterController.registerComplete()
+date:2017-09-27 17:28:18	thread:main	user:	X-Track:	level:INFO 	logger:o.s.w.s.m.m.a.RequestMappingHandlerMapping      	message:Mapped "{[/member/update],methods=[POST]}" onto public java.lang.String jp.co.ntt.atrs.app.c2.MemberUpdateController.update(jp.co.ntt.atrs.app.c2.MemberUpdateForm,org.springframework.validation.BindingResult,org.springframework.ui.Model,org.springframework.web.servlet.mvc.support.RedirectAttributes,java.security.Principal)
+date:2017-09-27 17:28:18	thread:main	user:	X-Track:	level:INFO 	logger:o.s.w.s.m.m.a.RequestMappingHandlerMapping      	message:Mapped "{[/member/update],methods=[GET],params=[form]}" onto public java.lang.String jp.co.ntt.atrs.app.c2.MemberUpdateController.updateForm(org.springframework.ui.Model,java.security.Principal)
+date:2017-09-27 17:28:18	thread:main	user:	X-Track:	level:INFO 	logger:o.s.w.s.m.m.a.RequestMappingHandlerMapping      	message:Mapped "{[/member/update],methods=[POST],params=[redo]}" onto public java.lang.String jp.co.ntt.atrs.app.c2.MemberUpdateController.updateRedo(jp.co.ntt.atrs.app.c2.MemberUpdateForm,org.springframework.ui.Model)
+date:2017-09-27 17:28:18	thread:main	user:	X-Track:	level:INFO 	logger:o.s.w.s.m.m.a.RequestMappingHandlerMapping      	message:Mapped "{[/member/update],methods=[GET],params=[complete]}" onto public java.lang.String jp.co.ntt.atrs.app.c2.MemberUpdateController.updateComplete(org.springframework.ui.Model,java.security.Principal)
+date:2017-09-27 17:28:19	thread:main	user:	X-Track:	level:INFO 	logger:o.s.w.s.m.m.a.RequestMappingHandlerAdapter      	message:Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@32a068d1: startup date [Wed Sep 27 17:28:14 JST 2017]; root of context hierarchy
+date:2017-09-27 17:28:19	thread:main	user:	X-Track:	level:INFO 	logger:o.s.w.s.m.m.a.RequestMappingHandlerAdapter      	message:Detected @InitBinder methods in globalBindingInitializer
+date:2017-09-27 17:28:19	thread:main	user:	X-Track:	level:INFO 	logger:o.s.w.s.m.m.a.RequestMappingHandlerAdapter      	message:Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@32a068d1: startup date [Wed Sep 27 17:28:14 JST 2017]; root of context hierarchy
+date:2017-09-27 17:28:19	thread:main	user:	X-Track:	level:INFO 	logger:o.s.w.s.m.m.a.RequestMappingHandlerAdapter      	message:Detected @InitBinder methods in globalBindingInitializer
+date:2017-09-27 17:28:20	thread:main	user:	X-Track:	level:INFO 	logger:o.s.web.servlet.handler.SimpleUrlHandlerMapping 	message:Mapped URL path [/resources/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#0'
+date:2017-09-27 17:28:20	thread:main	user:	X-Track:	level:INFO 	logger:o.s.w.s.m.m.a.RequestMappingHandlerAdapter      	message:Looking for @ControllerAdvice: org.springframework.test.web.servlet.setup.StubWebApplicationContext@fb6097b
+date:2017-09-27 18:25:45	thread:main	user:	X-Track:	level:DEBUG	logger:j.c.n.a.d.r.b.BoardingClassRepository.findAll   	message:==>  Preparing: SELECT boarding_class_cd, boarding_class_name, extra_charge FROM boarding_class 
+date:2017-09-27 18:25:45	thread:main	user:	X-Track:	level:DEBUG	logger:j.c.n.a.d.r.b.BoardingClassRepository.findAll   	message:==> Parameters: 
+date:2017-09-27 18:25:45	thread:main	user:	X-Track:	level:DEBUG	logger:jdbc.sqltiming                                  	message: sun.reflect.NativeMethodAccessorImpl.invoke0(NativeMethodAccessorImpl.java:-2)
+1. SELECT
+        boarding_class_cd,
+        boarding_class_name,
+        extra_charge
+    FROM
+        boarding_class {executed in 19 msec}
+date:2017-09-27 18:25:45	thread:main	user:	X-Track:	level:DEBUG	logger:j.c.n.a.d.r.b.BoardingClassRepository.findAll   	message:<==      Total: 2
+date:2017-09-27 18:25:45	thread:main	user:	X-Track:	level:DEBUG	logger:j.c.n.a.d.r.faretype.FareTypeRepository.findAll 	message:==>  Preparing: SELECT fare_type_cd, fare_type_name, discount_rate, rsrv_available_start_day_num, rsrv_available_end_day_num, passenger_min_num FROM fare_type 
+date:2017-09-27 18:25:45	thread:main	user:	X-Track:	level:DEBUG	logger:j.c.n.a.d.r.faretype.FareTypeRepository.findAll 	message:==> Parameters: 
+date:2017-09-27 18:25:46	thread:main	user:	X-Track:	level:DEBUG	logger:jdbc.sqltiming                                  	message: sun.reflect.NativeMethodAccessorImpl.invoke0(NativeMethodAccessorImpl.java:-2)
+2. SELECT
+        fare_type_cd,
+        fare_type_name,
+        discount_rate,
+        rsrv_available_start_day_num,
+        rsrv_available_end_day_num,
+        passenger_min_num
+    FROM
+        fare_type {executed in 2 msec}
+date:2017-09-27 18:25:46	thread:main	user:	X-Track:	level:DEBUG	logger:j.c.n.a.d.r.faretype.FareTypeRepository.findAll 	message:<==      Total: 10
+date:2017-09-27 18:25:46	thread:main	user:	X-Track:	level:DEBUG	logger:j.c.n.a.d.r.f.F.findAllFlightMaster             	message:==>  Preparing: SELECT fm.flight_name, fm.departure_time, fm.arrival_time, fm.craft_type, r.route_no, r.basic_fare, a_dep.airport_cd AS dep_airport_cd, a_dep.airport_name AS dep_airport_name, a_arr.airport_cd AS aar_airport_cd, a_arr.airport_name AS aar_airport_name FROM flight_master fm, route r, airport a_dep, airport a_arr WHERE fm.route_no = r.route_no AND r.dep_airport_cd = a_dep.airport_cd AND r.arr_airport_cd = a_arr.airport_cd 
+date:2017-09-27 18:25:46	thread:main	user:	X-Track:	level:DEBUG	logger:j.c.n.a.d.r.f.F.findAllFlightMaster             	message:==> Parameters: 
+date:2017-09-27 18:25:46	thread:main	user:	X-Track:	level:DEBUG	logger:jdbc.sqltiming                                  	message: sun.reflect.NativeMethodAccessorImpl.invoke0(NativeMethodAccessorImpl.java:-2)
+3. SELECT
+        fm.flight_name,
+        fm.departure_time,
+        fm.arrival_time,
+        fm.craft_type,
+        r.route_no,
+        r.basic_fare,
+        a_dep.airport_cd AS dep_airport_cd,
+        a_dep.airport_name AS dep_airport_name,
+        a_arr.airport_cd AS aar_airport_cd,
+        a_arr.airport_name AS aar_airport_name
+    FROM
+        flight_master fm,
+        route r,
+        airport a_dep,
+        airport a_arr
+    WHERE 
+        fm.route_no = r.route_no
+    AND
+        r.dep_airport_cd = a_dep.airport_cd
+    AND
+        r.arr_airport_cd = a_arr.airport_cd {executed in 4 msec}
+date:2017-09-27 18:25:46	thread:main	user:	X-Track:	level:DEBUG	logger:j.c.n.a.d.r.f.F.findAllFlightMaster             	message:<==      Total: 126
+date:2017-09-27 18:25:46	thread:main	user:	X-Track:	level:DEBUG	logger:j.c.n.a.d.r.peaktime.PeakTimeRepository.findAll 	message:==>  Preparing: SELECT peak_time_cd, peak_start_date, peak_end_date, multiplication_ratio FROM peak_time 
+date:2017-09-27 18:25:46	thread:main	user:	X-Track:	level:DEBUG	logger:j.c.n.a.d.r.peaktime.PeakTimeRepository.findAll 	message:==> Parameters: 
+date:2017-09-27 18:25:46	thread:main	user:	X-Track:	level:DEBUG	logger:jdbc.sqltiming                                  	message: sun.reflect.NativeMethodAccessorImpl.invoke0(NativeMethodAccessorImpl.java:-2)
+4. SELECT
+        peak_time_cd,
+        peak_start_date,
+        peak_end_date,
+        multiplication_ratio
+    FROM
+        peak_time {executed in 1 msec}
+date:2017-09-27 18:25:46	thread:main	user:	X-Track:	level:DEBUG	logger:j.c.n.a.d.r.peaktime.PeakTimeRepository.findAll 	message:<==      Total: 16
+date:2017-09-27 18:25:46	thread:main	user:	X-Track:	level:DEBUG	logger:j.c.n.a.d.r.route.RouteRepository.findAll       	message:==>  Preparing: SELECT r.route_no, r.basic_fare, a_dep.airport_cd AS dep_airport_cd, a_dep.airport_name AS dep_airport_name, a_arr.airport_cd AS aar_airport_cd, a_arr.airport_name AS aar_airport_name FROM route r, airport a_dep, airport a_arr WHERE r.dep_airport_cd = a_dep.airport_cd AND r.arr_airport_cd = a_arr.airport_cd 
+date:2017-09-27 18:25:46	thread:main	user:	X-Track:	level:DEBUG	logger:j.c.n.a.d.r.route.RouteRepository.findAll       	message:==> Parameters: 
+date:2017-09-27 18:25:46	thread:main	user:	X-Track:	level:DEBUG	logger:jdbc.sqltiming                                  	message: sun.reflect.NativeMethodAccessorImpl.invoke0(NativeMethodAccessorImpl.java:-2)
+5. SELECT
+        r.route_no,
+        r.basic_fare,
+        a_dep.airport_cd AS dep_airport_cd,
+        a_dep.airport_name AS dep_airport_name,
+        a_arr.airport_cd AS aar_airport_cd,
+        a_arr.airport_name AS aar_airport_name
+    FROM
+        route r,
+        airport a_dep,
+        airport a_arr
+    WHERE
+        r.dep_airport_cd = a_dep.airport_cd
+    AND
+        r.arr_airport_cd = a_arr.airport_cd {executed in 2 msec}
+date:2017-09-27 18:25:46	thread:main	user:	X-Track:	level:DEBUG	logger:j.c.n.a.d.r.route.RouteRepository.findAll       	message:<==      Total: 20
+date:2017-09-27 18:25:46	thread:main	user:	X-Track:	level:WARN 	logger:org.dozer.config.GlobalSettings                 	message:Dozer configuration file not found: dozer.properties.  Using defaults for all Dozer global properties.
+date:2017-09-27 18:25:47	thread:main	user:	X-Track:	level:DEBUG	logger:j.c.n.a.domain.common.codelist.AirportCodeList  	message:refresh codelist codeListId=CL_AIRPORT
+date:2017-09-27 18:25:47	thread:main	user:	X-Track:	level:DEBUG	logger:jdbc.sqltiming                                  	message: org.springframework.jdbc.core.JdbcTemplate$1QueryStatementCallback.doInStatement(JdbcTemplate.java:454)
+6. SELECT airport_cd,airport_name,display_order FROM airport order by display_order ASC {executed in 2 msec}
+date:2017-09-27 18:25:47	thread:main	user:	X-Track:	level:DEBUG	logger:org.terasoluna.gfw.common.codelist.JdbcCodeList 	message:refresh codelist codeListId=CL_BOARDINGCLASS
+date:2017-09-27 18:25:47	thread:main	user:	X-Track:	level:DEBUG	logger:jdbc.sqltiming                                  	message: org.springframework.jdbc.core.JdbcTemplate$1QueryStatementCallback.doInStatement(JdbcTemplate.java:454)
+7. SELECT boarding_class_cd,boarding_class_name FROM boarding_class ORDER BY display_order ASC {executed in 1 msec}
+date:2017-09-27 18:25:47	thread:main	user:	X-Track:	level:DEBUG	logger:org.terasoluna.gfw.common.codelist.JdbcCodeList 	message:refresh codelist codeListId=CL_FARETYPE
+date:2017-09-27 18:25:47	thread:main	user:	X-Track:	level:DEBUG	logger:jdbc.sqltiming                                  	message: org.springframework.jdbc.core.JdbcTemplate$1QueryStatementCallback.doInStatement(JdbcTemplate.java:454)
+8. SELECT fare_type_cd, fare_type_name FROM fare_type ORDER BY display_order ASC {executed in 1 msec}
+date:2017-09-27 18:25:47	thread:main	user:	X-Track:	level:DEBUG	logger:org.terasoluna.gfw.common.codelist.JdbcCodeList 	message:refresh codelist codeListId=CL_CREDITTYPE
+date:2017-09-27 18:25:47	thread:main	user:	X-Track:	level:DEBUG	logger:jdbc.sqltiming                                  	message: org.springframework.jdbc.core.JdbcTemplate$1QueryStatementCallback.doInStatement(JdbcTemplate.java:454)
+9. SELECT credit_type_cd, credit_firm FROM credit_type ORDER BY display_order ASC {executed in 2 msec}
+date:2017-09-27 18:25:47	thread:main	user:	X-Track:	level:DEBUG	logger:o.t.gfw.web.codelist.CodeListInterceptor        	message:registered codeList : [CL_CREDITMONTH, CL_FLIGHTTYPE, CL_BOARDINGCLASS, CL_CREDITYEAR, CL_CREDITTYPE, CL_FARETYPE, CL_AIRPORT, CL_GENDER]
+date:2017-09-27 18:25:47	thread:main	user:	X-Track:	level:INFO 	logger:o.s.w.s.m.m.a.RequestMappingHandlerMapping      	message:Mapped "{[/api/auth/status],methods=[GET]}" onto public org.springframework.http.ResponseEntity<java.lang.Object> jp.co.ntt.atrs.app.a0.AuthApiController.getStatus(jp.co.ntt.atrs.domain.service.a1.AtrsUserDetails)
+date:2017-09-27 18:25:47	thread:main	user:	X-Track:	level:INFO 	logger:o.s.w.s.m.m.a.RequestMappingHandlerMapping      	message:Mapped "{[/]}" onto public java.lang.String jp.co.ntt.atrs.app.a0.IndexController.homePage()
+date:2017-09-27 18:25:47	thread:main	user:	X-Track:	level:INFO 	logger:o.s.w.s.m.m.a.RequestMappingHandlerMapping      	message:Mapped "{[/api/member/available],methods=[GET]}" onto public org.springframework.http.ResponseEntity<java.lang.Object> jp.co.ntt.atrs.app.a0.MemberApiController.getAvailable(java.lang.String)
+date:2017-09-27 18:25:47	thread:main	user:	X-Track:	level:INFO 	logger:o.s.w.s.m.m.a.RequestMappingHandlerMapping      	message:Mapped "{[/auth/login]}" onto public java.lang.String jp.co.ntt.atrs.app.a1.AuthLoginController.loginForm()
+date:2017-09-27 18:25:47	thread:main	user:	X-Track:	level:INFO 	logger:o.s.w.s.m.m.a.RequestMappingHandlerMapping      	message:Mapped "{[/api/flights],methods=[GET]}" onto public java.util.List<jp.co.ntt.atrs.domain.service.b1.FlightVacantInfoDto> jp.co.ntt.atrs.app.b1.FlightsApiController.getFlights(jp.co.ntt.atrs.app.b1.FlightSearchCriteriaForm)
+date:2017-09-27 18:25:47	thread:main	user:	X-Track:	level:INFO 	logger:o.s.w.s.m.m.a.RequestMappingHandlerMapping      	message:Mapped "{[/ticket/search],methods=[GET],params=[topForm]}" onto public java.lang.String jp.co.ntt.atrs.app.b1.TicketSearchController.searchTopForm(org.springframework.ui.Model)
+date:2017-09-27 18:25:47	thread:main	user:	X-Track:	level:INFO 	logger:o.s.w.s.m.m.a.RequestMappingHandlerMapping      	message:Mapped "{[/ticket/search],methods=[GET],params=[form]}" onto public java.lang.String jp.co.ntt.atrs.app.b1.TicketSearchController.searchForm(org.springframework.ui.Model)
+date:2017-09-27 18:25:47	thread:main	user:	X-Track:	level:INFO 	logger:o.s.w.s.m.m.a.RequestMappingHandlerMapping      	message:Mapped "{[/ticket/search],methods=[GET],params=[flightForm]}" onto public java.lang.String jp.co.ntt.atrs.app.b1.TicketSearchController.searchFlightForm(jp.co.ntt.atrs.app.b1.TicketSearchForm,org.springframework.validation.BindingResult,org.springframework.ui.Model)
+date:2017-09-27 18:25:47	thread:main	user:	X-Track:	level:INFO 	logger:o.s.w.s.m.m.a.RequestMappingHandlerMapping      	message:Mapped "{[/ticket/search],methods=[GET],params=[redo]}" onto public java.lang.String jp.co.ntt.atrs.app.b1.TicketSearchController.searchRedo(jp.co.ntt.atrs.app.b1.TicketSearchForm,jp.co.ntt.atrs.app.b0.ReservationFlightForm,org.springframework.ui.Model)
+date:2017-09-27 18:25:47	thread:main	user:	X-Track:	level:INFO 	logger:o.s.w.s.m.m.a.RequestMappingHandlerMapping      	message:Mapped "{[/ticket/search],methods=[POST]}" onto public java.lang.String jp.co.ntt.atrs.app.b1.TicketSearchController.searchSelect(jp.co.ntt.atrs.app.b1.TicketSearchForm,jp.co.ntt.atrs.app.b0.ReservationFlightForm,org.springframework.validation.BindingResult,org.springframework.ui.Model,org.springframework.web.servlet.mvc.support.RedirectAttributes)
+date:2017-09-27 18:25:47	thread:main	user:	X-Track:	level:INFO 	logger:o.s.w.s.m.m.a.RequestMappingHandlerMapping      	message:Mapped "{[/ticket/reserve],methods=[GET],params=[complete]}" onto public java.lang.String jp.co.ntt.atrs.app.b2.TicketReserveController.reserveComplete()
+date:2017-09-27 18:25:47	thread:main	user:	X-Track:	level:INFO 	logger:o.s.w.s.m.m.a.RequestMappingHandlerMapping      	message:Mapped "{[/ticket/reserve],methods=[GET],params=[form]}" onto public java.lang.String jp.co.ntt.atrs.app.b2.TicketReserveController.reserveForm(jp.co.ntt.atrs.app.b0.ReservationFlightForm,jp.co.ntt.atrs.domain.service.a1.AtrsUserDetails,org.springframework.ui.Model)
+date:2017-09-27 18:25:47	thread:main	user:	X-Track:	level:INFO 	logger:o.s.w.s.m.m.a.RequestMappingHandlerMapping      	message:Mapped "{[/ticket/reserve],methods=[POST],params=[redo]}" onto public java.lang.String jp.co.ntt.atrs.app.b2.TicketReserveController.reserveRedo(jp.co.ntt.atrs.app.b2.TicketReserveForm,org.springframework.ui.Model)
+date:2017-09-27 18:25:47	thread:main	user:	X-Track:	level:INFO 	logger:o.s.w.s.m.m.a.RequestMappingHandlerMapping      	message:Mapped "{[/ticket/reserve],methods=[POST]}" onto public java.lang.String jp.co.ntt.atrs.app.b2.TicketReserveController.reserve(jp.co.ntt.atrs.app.b2.TicketReserveForm,org.springframework.validation.BindingResult,org.springframework.ui.Model,org.springframework.web.servlet.mvc.support.RedirectAttributes) throws jp.co.ntt.atrs.app.common.exception.BadRequestException
+date:2017-09-27 18:25:47	thread:main	user:	X-Track:	level:INFO 	logger:o.s.w.s.m.m.a.RequestMappingHandlerMapping      	message:Mapped "{[/ticket/reserve],methods=[POST],params=[confirm]}" onto public java.lang.String jp.co.ntt.atrs.app.b2.TicketReserveController.reserveConfirm(jp.co.ntt.atrs.app.b2.TicketReserveForm,org.springframework.validation.BindingResult,org.springframework.ui.Model) throws jp.co.ntt.atrs.app.common.exception.BadRequestException
+date:2017-09-27 18:25:47	thread:main	user:	X-Track:	level:INFO 	logger:o.s.w.s.m.m.a.RequestMappingHandlerMapping      	message:Mapped "{[/ticket/reserve],methods=[GET],params=[fail]}" onto public java.lang.String jp.co.ntt.atrs.app.b2.TicketReserveController.reserveFail()
+date:2017-09-27 18:25:47	thread:main	user:	X-Track:	level:INFO 	logger:o.s.w.s.m.m.a.RequestMappingHandlerMapping      	message:Mapped "{[/ticket/reserve],methods=[POST],params=[backToSearch]}" onto public java.lang.String jp.co.ntt.atrs.app.b2.TicketReserveController.reserveBackToSearch(jp.co.ntt.atrs.app.b0.ReservationFlightForm,org.springframework.ui.Model,org.springframework.web.servlet.mvc.support.RedirectAttributes)
+date:2017-09-27 18:25:47	thread:main	user:	X-Track:	level:INFO 	logger:o.s.w.s.m.m.a.RequestMappingHandlerMapping      	message:Mapped "{[/member/register],methods=[POST]}" onto public java.lang.String jp.co.ntt.atrs.app.c1.MemberRegisterController.register(jp.co.ntt.atrs.app.c1.MemberRegisterForm,org.springframework.validation.BindingResult,org.springframework.ui.Model,org.springframework.web.servlet.mvc.support.RedirectAttributes)
+date:2017-09-27 18:25:47	thread:main	user:	X-Track:	level:INFO 	logger:o.s.w.s.m.m.a.RequestMappingHandlerMapping      	message:Mapped "{[/member/register],methods=[POST],params=[confirm]}" onto public java.lang.String jp.co.ntt.atrs.app.c1.MemberRegisterController.registerConfirm(jp.co.ntt.atrs.app.c1.MemberRegisterForm,org.springframework.validation.BindingResult,org.springframework.ui.Model)
+date:2017-09-27 18:25:47	thread:main	user:	X-Track:	level:INFO 	logger:o.s.w.s.m.m.a.RequestMappingHandlerMapping      	message:Mapped "{[/member/register],methods=[POST],params=[redo]}" onto public java.lang.String jp.co.ntt.atrs.app.c1.MemberRegisterController.registerRedo(jp.co.ntt.atrs.app.c1.MemberRegisterForm,org.springframework.ui.Model)
+date:2017-09-27 18:25:47	thread:main	user:	X-Track:	level:INFO 	logger:o.s.w.s.m.m.a.RequestMappingHandlerMapping      	message:Mapped "{[/member/register],methods=[GET],params=[form]}" onto public java.lang.String jp.co.ntt.atrs.app.c1.MemberRegisterController.registerForm(org.springframework.ui.Model)
+date:2017-09-27 18:25:47	thread:main	user:	X-Track:	level:INFO 	logger:o.s.w.s.m.m.a.RequestMappingHandlerMapping      	message:Mapped "{[/member/register],methods=[GET],params=[complete]}" onto public java.lang.String jp.co.ntt.atrs.app.c1.MemberRegisterController.registerComplete()
+date:2017-09-27 18:25:47	thread:main	user:	X-Track:	level:INFO 	logger:o.s.w.s.m.m.a.RequestMappingHandlerMapping      	message:Mapped "{[/member/update],methods=[POST]}" onto public java.lang.String jp.co.ntt.atrs.app.c2.MemberUpdateController.update(jp.co.ntt.atrs.app.c2.MemberUpdateForm,org.springframework.validation.BindingResult,org.springframework.ui.Model,org.springframework.web.servlet.mvc.support.RedirectAttributes,java.security.Principal)
+date:2017-09-27 18:25:47	thread:main	user:	X-Track:	level:INFO 	logger:o.s.w.s.m.m.a.RequestMappingHandlerMapping      	message:Mapped "{[/member/update],methods=[GET],params=[form]}" onto public java.lang.String jp.co.ntt.atrs.app.c2.MemberUpdateController.updateForm(org.springframework.ui.Model,java.security.Principal)
+date:2017-09-27 18:25:47	thread:main	user:	X-Track:	level:INFO 	logger:o.s.w.s.m.m.a.RequestMappingHandlerMapping      	message:Mapped "{[/member/update],methods=[POST],params=[redo]}" onto public java.lang.String jp.co.ntt.atrs.app.c2.MemberUpdateController.updateRedo(jp.co.ntt.atrs.app.c2.MemberUpdateForm,org.springframework.ui.Model)
+date:2017-09-27 18:25:47	thread:main	user:	X-Track:	level:INFO 	logger:o.s.w.s.m.m.a.RequestMappingHandlerMapping      	message:Mapped "{[/member/update],methods=[GET],params=[complete]}" onto public java.lang.String jp.co.ntt.atrs.app.c2.MemberUpdateController.updateComplete(org.springframework.ui.Model,java.security.Principal)
+date:2017-09-27 18:25:49	thread:main	user:	X-Track:	level:INFO 	logger:o.s.w.s.m.m.a.RequestMappingHandlerAdapter      	message:Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@32a068d1: startup date [Wed Sep 27 18:25:43 JST 2017]; root of context hierarchy
+date:2017-09-27 18:25:49	thread:main	user:	X-Track:	level:INFO 	logger:o.s.w.s.m.m.a.RequestMappingHandlerAdapter      	message:Detected @InitBinder methods in globalBindingInitializer
+date:2017-09-27 18:25:49	thread:main	user:	X-Track:	level:INFO 	logger:o.s.w.s.m.m.a.RequestMappingHandlerAdapter      	message:Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@32a068d1: startup date [Wed Sep 27 18:25:43 JST 2017]; root of context hierarchy
+date:2017-09-27 18:25:49	thread:main	user:	X-Track:	level:INFO 	logger:o.s.w.s.m.m.a.RequestMappingHandlerAdapter      	message:Detected @InitBinder methods in globalBindingInitializer
+date:2017-09-27 18:25:49	thread:main	user:	X-Track:	level:INFO 	logger:o.s.web.servlet.handler.SimpleUrlHandlerMapping 	message:Mapped URL path [/resources/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#0'
+date:2017-09-27 18:25:50	thread:main	user:	X-Track:	level:INFO 	logger:o.s.w.s.m.m.a.RequestMappingHandlerAdapter      	message:Looking for @ControllerAdvice: org.springframework.test.web.servlet.setup.StubWebApplicationContext@6778aea6
+date:2017-09-27 18:31:48	thread:main	user:	X-Track:	level:INFO 	logger:o.s.w.s.m.m.a.RequestMappingHandlerAdapter      	message:Looking for @ControllerAdvice: org.springframework.test.web.servlet.setup.StubWebApplicationContext@f8c1ddd
+date:2017-09-27 18:31:59	thread:main	user:	X-Track:	level:DEBUG	logger:j.c.n.a.d.r.b.BoardingClassRepository.findAll   	message:==>  Preparing: SELECT boarding_class_cd, boarding_class_name, extra_charge FROM boarding_class 
+date:2017-09-27 18:31:59	thread:main	user:	X-Track:	level:DEBUG	logger:j.c.n.a.d.r.b.BoardingClassRepository.findAll   	message:==> Parameters: 
+date:2017-09-27 18:31:59	thread:main	user:	X-Track:	level:DEBUG	logger:jdbc.sqltiming                                  	message: sun.reflect.NativeMethodAccessorImpl.invoke0(NativeMethodAccessorImpl.java:-2)
+1. SELECT
+        boarding_class_cd,
+        boarding_class_name,
+        extra_charge
+    FROM
+        boarding_class {executed in 20 msec}
+date:2017-09-27 18:31:59	thread:main	user:	X-Track:	level:DEBUG	logger:j.c.n.a.d.r.b.BoardingClassRepository.findAll   	message:<==      Total: 2
+date:2017-09-27 18:31:59	thread:main	user:	X-Track:	level:DEBUG	logger:j.c.n.a.d.r.faretype.FareTypeRepository.findAll 	message:==>  Preparing: SELECT fare_type_cd, fare_type_name, discount_rate, rsrv_available_start_day_num, rsrv_available_end_day_num, passenger_min_num FROM fare_type 
+date:2017-09-27 18:31:59	thread:main	user:	X-Track:	level:DEBUG	logger:j.c.n.a.d.r.faretype.FareTypeRepository.findAll 	message:==> Parameters: 
+date:2017-09-27 18:31:59	thread:main	user:	X-Track:	level:DEBUG	logger:jdbc.sqltiming                                  	message: sun.reflect.NativeMethodAccessorImpl.invoke0(NativeMethodAccessorImpl.java:-2)
+2. SELECT
+        fare_type_cd,
+        fare_type_name,
+        discount_rate,
+        rsrv_available_start_day_num,
+        rsrv_available_end_day_num,
+        passenger_min_num
+    FROM
+        fare_type {executed in 2 msec}
+date:2017-09-27 18:31:59	thread:main	user:	X-Track:	level:DEBUG	logger:j.c.n.a.d.r.faretype.FareTypeRepository.findAll 	message:<==      Total: 10
+date:2017-09-27 18:31:59	thread:main	user:	X-Track:	level:DEBUG	logger:j.c.n.a.d.r.f.F.findAllFlightMaster             	message:==>  Preparing: SELECT fm.flight_name, fm.departure_time, fm.arrival_time, fm.craft_type, r.route_no, r.basic_fare, a_dep.airport_cd AS dep_airport_cd, a_dep.airport_name AS dep_airport_name, a_arr.airport_cd AS aar_airport_cd, a_arr.airport_name AS aar_airport_name FROM flight_master fm, route r, airport a_dep, airport a_arr WHERE fm.route_no = r.route_no AND r.dep_airport_cd = a_dep.airport_cd AND r.arr_airport_cd = a_arr.airport_cd 
+date:2017-09-27 18:31:59	thread:main	user:	X-Track:	level:DEBUG	logger:j.c.n.a.d.r.f.F.findAllFlightMaster             	message:==> Parameters: 
+date:2017-09-27 18:31:59	thread:main	user:	X-Track:	level:DEBUG	logger:jdbc.sqltiming                                  	message: sun.reflect.NativeMethodAccessorImpl.invoke0(NativeMethodAccessorImpl.java:-2)
+3. SELECT
+        fm.flight_name,
+        fm.departure_time,
+        fm.arrival_time,
+        fm.craft_type,
+        r.route_no,
+        r.basic_fare,
+        a_dep.airport_cd AS dep_airport_cd,
+        a_dep.airport_name AS dep_airport_name,
+        a_arr.airport_cd AS aar_airport_cd,
+        a_arr.airport_name AS aar_airport_name
+    FROM
+        flight_master fm,
+        route r,
+        airport a_dep,
+        airport a_arr
+    WHERE 
+        fm.route_no = r.route_no
+    AND
+        r.dep_airport_cd = a_dep.airport_cd
+    AND
+        r.arr_airport_cd = a_arr.airport_cd {executed in 8 msec}
+date:2017-09-27 18:31:59	thread:main	user:	X-Track:	level:DEBUG	logger:j.c.n.a.d.r.f.F.findAllFlightMaster             	message:<==      Total: 126
+date:2017-09-27 18:31:59	thread:main	user:	X-Track:	level:DEBUG	logger:j.c.n.a.d.r.peaktime.PeakTimeRepository.findAll 	message:==>  Preparing: SELECT peak_time_cd, peak_start_date, peak_end_date, multiplication_ratio FROM peak_time 
+date:2017-09-27 18:31:59	thread:main	user:	X-Track:	level:DEBUG	logger:j.c.n.a.d.r.peaktime.PeakTimeRepository.findAll 	message:==> Parameters: 
+date:2017-09-27 18:31:59	thread:main	user:	X-Track:	level:DEBUG	logger:jdbc.sqltiming                                  	message: sun.reflect.NativeMethodAccessorImpl.invoke0(NativeMethodAccessorImpl.java:-2)
+4. SELECT
+        peak_time_cd,
+        peak_start_date,
+        peak_end_date,
+        multiplication_ratio
+    FROM
+        peak_time {executed in 1 msec}
+date:2017-09-27 18:31:59	thread:main	user:	X-Track:	level:DEBUG	logger:j.c.n.a.d.r.peaktime.PeakTimeRepository.findAll 	message:<==      Total: 16
+date:2017-09-27 18:31:59	thread:main	user:	X-Track:	level:DEBUG	logger:j.c.n.a.d.r.route.RouteRepository.findAll       	message:==>  Preparing: SELECT r.route_no, r.basic_fare, a_dep.airport_cd AS dep_airport_cd, a_dep.airport_name AS dep_airport_name, a_arr.airport_cd AS aar_airport_cd, a_arr.airport_name AS aar_airport_name FROM route r, airport a_dep, airport a_arr WHERE r.dep_airport_cd = a_dep.airport_cd AND r.arr_airport_cd = a_arr.airport_cd 
+date:2017-09-27 18:31:59	thread:main	user:	X-Track:	level:DEBUG	logger:j.c.n.a.d.r.route.RouteRepository.findAll       	message:==> Parameters: 
+date:2017-09-27 18:31:59	thread:main	user:	X-Track:	level:DEBUG	logger:jdbc.sqltiming                                  	message: sun.reflect.NativeMethodAccessorImpl.invoke0(NativeMethodAccessorImpl.java:-2)
+5. SELECT
+        r.route_no,
+        r.basic_fare,
+        a_dep.airport_cd AS dep_airport_cd,
+        a_dep.airport_name AS dep_airport_name,
+        a_arr.airport_cd AS aar_airport_cd,
+        a_arr.airport_name AS aar_airport_name
+    FROM
+        route r,
+        airport a_dep,
+        airport a_arr
+    WHERE
+        r.dep_airport_cd = a_dep.airport_cd
+    AND
+        r.arr_airport_cd = a_arr.airport_cd {executed in 2 msec}
+date:2017-09-27 18:31:59	thread:main	user:	X-Track:	level:DEBUG	logger:j.c.n.a.d.r.route.RouteRepository.findAll       	message:<==      Total: 20
+date:2017-09-27 18:32:00	thread:main	user:	X-Track:	level:WARN 	logger:org.dozer.config.GlobalSettings                 	message:Dozer configuration file not found: dozer.properties.  Using defaults for all Dozer global properties.
+date:2017-09-27 18:32:00	thread:main	user:	X-Track:	level:DEBUG	logger:j.c.n.a.domain.common.codelist.AirportCodeList  	message:refresh codelist codeListId=CL_AIRPORT
+date:2017-09-27 18:32:00	thread:main	user:	X-Track:	level:DEBUG	logger:jdbc.sqltiming                                  	message: org.springframework.jdbc.core.JdbcTemplate$1QueryStatementCallback.doInStatement(JdbcTemplate.java:454)
+6. SELECT airport_cd,airport_name,display_order FROM airport order by display_order ASC {executed in 1 msec}
+date:2017-09-27 18:32:00	thread:main	user:	X-Track:	level:DEBUG	logger:org.terasoluna.gfw.common.codelist.JdbcCodeList 	message:refresh codelist codeListId=CL_BOARDINGCLASS
+date:2017-09-27 18:32:00	thread:main	user:	X-Track:	level:DEBUG	logger:jdbc.sqltiming                                  	message: org.springframework.jdbc.core.JdbcTemplate$1QueryStatementCallback.doInStatement(JdbcTemplate.java:454)
+7. SELECT boarding_class_cd,boarding_class_name FROM boarding_class ORDER BY display_order ASC {executed in 1 msec}
+date:2017-09-27 18:32:00	thread:main	user:	X-Track:	level:DEBUG	logger:org.terasoluna.gfw.common.codelist.JdbcCodeList 	message:refresh codelist codeListId=CL_FARETYPE
+date:2017-09-27 18:32:00	thread:main	user:	X-Track:	level:DEBUG	logger:jdbc.sqltiming                                  	message: org.springframework.jdbc.core.JdbcTemplate$1QueryStatementCallback.doInStatement(JdbcTemplate.java:454)
+8. SELECT fare_type_cd, fare_type_name FROM fare_type ORDER BY display_order ASC {executed in 1 msec}
+date:2017-09-27 18:32:00	thread:main	user:	X-Track:	level:DEBUG	logger:org.terasoluna.gfw.common.codelist.JdbcCodeList 	message:refresh codelist codeListId=CL_CREDITTYPE
+date:2017-09-27 18:32:00	thread:main	user:	X-Track:	level:DEBUG	logger:jdbc.sqltiming                                  	message: org.springframework.jdbc.core.JdbcTemplate$1QueryStatementCallback.doInStatement(JdbcTemplate.java:454)
+9. SELECT credit_type_cd, credit_firm FROM credit_type ORDER BY display_order ASC {executed in 2 msec}
+date:2017-09-27 18:32:00	thread:main	user:	X-Track:	level:DEBUG	logger:o.t.gfw.web.codelist.CodeListInterceptor        	message:registered codeList : [CL_CREDITMONTH, CL_FLIGHTTYPE, CL_BOARDINGCLASS, CL_CREDITYEAR, CL_CREDITTYPE, CL_FARETYPE, CL_AIRPORT, CL_GENDER]
+date:2017-09-27 18:32:00	thread:main	user:	X-Track:	level:INFO 	logger:o.s.w.s.m.m.a.RequestMappingHandlerMapping      	message:Mapped "{[/api/auth/status],methods=[GET]}" onto public org.springframework.http.ResponseEntity<java.lang.Object> jp.co.ntt.atrs.app.a0.AuthApiController.getStatus(jp.co.ntt.atrs.domain.service.a1.AtrsUserDetails)
+date:2017-09-27 18:32:00	thread:main	user:	X-Track:	level:INFO 	logger:o.s.w.s.m.m.a.RequestMappingHandlerMapping      	message:Mapped "{[/]}" onto public java.lang.String jp.co.ntt.atrs.app.a0.IndexController.homePage()
+date:2017-09-27 18:32:00	thread:main	user:	X-Track:	level:INFO 	logger:o.s.w.s.m.m.a.RequestMappingHandlerMapping      	message:Mapped "{[/api/member/available],methods=[GET]}" onto public org.springframework.http.ResponseEntity<java.lang.Object> jp.co.ntt.atrs.app.a0.MemberApiController.getAvailable(java.lang.String)
+date:2017-09-27 18:32:00	thread:main	user:	X-Track:	level:INFO 	logger:o.s.w.s.m.m.a.RequestMappingHandlerMapping      	message:Mapped "{[/auth/login]}" onto public java.lang.String jp.co.ntt.atrs.app.a1.AuthLoginController.loginForm()
+date:2017-09-27 18:32:00	thread:main	user:	X-Track:	level:INFO 	logger:o.s.w.s.m.m.a.RequestMappingHandlerMapping      	message:Mapped "{[/api/flights],methods=[GET]}" onto public java.util.List<jp.co.ntt.atrs.domain.service.b1.FlightVacantInfoDto> jp.co.ntt.atrs.app.b1.FlightsApiController.getFlights(jp.co.ntt.atrs.app.b1.FlightSearchCriteriaForm)
+date:2017-09-27 18:32:01	thread:main	user:	X-Track:	level:INFO 	logger:o.s.w.s.m.m.a.RequestMappingHandlerMapping      	message:Mapped "{[/ticket/search],methods=[GET],params=[topForm]}" onto public java.lang.String jp.co.ntt.atrs.app.b1.TicketSearchController.searchTopForm(org.springframework.ui.Model)
+date:2017-09-27 18:32:01	thread:main	user:	X-Track:	level:INFO 	logger:o.s.w.s.m.m.a.RequestMappingHandlerMapping      	message:Mapped "{[/ticket/search],methods=[GET],params=[form]}" onto public java.lang.String jp.co.ntt.atrs.app.b1.TicketSearchController.searchForm(org.springframework.ui.Model)
+date:2017-09-27 18:32:01	thread:main	user:	X-Track:	level:INFO 	logger:o.s.w.s.m.m.a.RequestMappingHandlerMapping      	message:Mapped "{[/ticket/search],methods=[GET],params=[flightForm]}" onto public java.lang.String jp.co.ntt.atrs.app.b1.TicketSearchController.searchFlightForm(jp.co.ntt.atrs.app.b1.TicketSearchForm,org.springframework.validation.BindingResult,org.springframework.ui.Model)
+date:2017-09-27 18:32:01	thread:main	user:	X-Track:	level:INFO 	logger:o.s.w.s.m.m.a.RequestMappingHandlerMapping      	message:Mapped "{[/ticket/search],methods=[GET],params=[redo]}" onto public java.lang.String jp.co.ntt.atrs.app.b1.TicketSearchController.searchRedo(jp.co.ntt.atrs.app.b1.TicketSearchForm,jp.co.ntt.atrs.app.b0.ReservationFlightForm,org.springframework.ui.Model)
+date:2017-09-27 18:32:01	thread:main	user:	X-Track:	level:INFO 	logger:o.s.w.s.m.m.a.RequestMappingHandlerMapping      	message:Mapped "{[/ticket/search],methods=[POST]}" onto public java.lang.String jp.co.ntt.atrs.app.b1.TicketSearchController.searchSelect(jp.co.ntt.atrs.app.b1.TicketSearchForm,jp.co.ntt.atrs.app.b0.ReservationFlightForm,org.springframework.validation.BindingResult,org.springframework.ui.Model,org.springframework.web.servlet.mvc.support.RedirectAttributes)
+date:2017-09-27 18:32:01	thread:main	user:	X-Track:	level:INFO 	logger:o.s.w.s.m.m.a.RequestMappingHandlerMapping      	message:Mapped "{[/ticket/reserve],methods=[POST],params=[backToSearch]}" onto public java.lang.String jp.co.ntt.atrs.app.b2.TicketReserveController.reserveBackToSearch(jp.co.ntt.atrs.app.b0.ReservationFlightForm,org.springframework.ui.Model,org.springframework.web.servlet.mvc.support.RedirectAttributes)
+date:2017-09-27 18:32:01	thread:main	user:	X-Track:	level:INFO 	logger:o.s.w.s.m.m.a.RequestMappingHandlerMapping      	message:Mapped "{[/ticket/reserve],methods=[POST]}" onto public java.lang.String jp.co.ntt.atrs.app.b2.TicketReserveController.reserve(jp.co.ntt.atrs.app.b2.TicketReserveForm,org.springframework.validation.BindingResult,org.springframework.ui.Model,org.springframework.web.servlet.mvc.support.RedirectAttributes) throws jp.co.ntt.atrs.app.common.exception.BadRequestException
+date:2017-09-27 18:32:01	thread:main	user:	X-Track:	level:INFO 	logger:o.s.w.s.m.m.a.RequestMappingHandlerMapping      	message:Mapped "{[/ticket/reserve],methods=[GET],params=[fail]}" onto public java.lang.String jp.co.ntt.atrs.app.b2.TicketReserveController.reserveFail()
+date:2017-09-27 18:32:01	thread:main	user:	X-Track:	level:INFO 	logger:o.s.w.s.m.m.a.RequestMappingHandlerMapping      	message:Mapped "{[/ticket/reserve],methods=[GET],params=[form]}" onto public java.lang.String jp.co.ntt.atrs.app.b2.TicketReserveController.reserveForm(jp.co.ntt.atrs.app.b0.ReservationFlightForm,jp.co.ntt.atrs.domain.service.a1.AtrsUserDetails,org.springframework.ui.Model)
+date:2017-09-27 18:32:01	thread:main	user:	X-Track:	level:INFO 	logger:o.s.w.s.m.m.a.RequestMappingHandlerMapping      	message:Mapped "{[/ticket/reserve],methods=[POST],params=[redo]}" onto public java.lang.String jp.co.ntt.atrs.app.b2.TicketReserveController.reserveRedo(jp.co.ntt.atrs.app.b2.TicketReserveForm,org.springframework.ui.Model)
+date:2017-09-27 18:32:01	thread:main	user:	X-Track:	level:INFO 	logger:o.s.w.s.m.m.a.RequestMappingHandlerMapping      	message:Mapped "{[/ticket/reserve],methods=[GET],params=[complete]}" onto public java.lang.String jp.co.ntt.atrs.app.b2.TicketReserveController.reserveComplete()
+date:2017-09-27 18:32:01	thread:main	user:	X-Track:	level:INFO 	logger:o.s.w.s.m.m.a.RequestMappingHandlerMapping      	message:Mapped "{[/ticket/reserve],methods=[POST],params=[confirm]}" onto public java.lang.String jp.co.ntt.atrs.app.b2.TicketReserveController.reserveConfirm(jp.co.ntt.atrs.app.b2.TicketReserveForm,org.springframework.validation.BindingResult,org.springframework.ui.Model) throws jp.co.ntt.atrs.app.common.exception.BadRequestException
+date:2017-09-27 18:32:01	thread:main	user:	X-Track:	level:INFO 	logger:o.s.w.s.m.m.a.RequestMappingHandlerMapping      	message:Mapped "{[/member/register],methods=[POST]}" onto public java.lang.String jp.co.ntt.atrs.app.c1.MemberRegisterController.register(jp.co.ntt.atrs.app.c1.MemberRegisterForm,org.springframework.validation.BindingResult,org.springframework.ui.Model,org.springframework.web.servlet.mvc.support.RedirectAttributes)
+date:2017-09-27 18:32:01	thread:main	user:	X-Track:	level:INFO 	logger:o.s.w.s.m.m.a.RequestMappingHandlerMapping      	message:Mapped "{[/member/register],methods=[POST],params=[confirm]}" onto public java.lang.String jp.co.ntt.atrs.app.c1.MemberRegisterController.registerConfirm(jp.co.ntt.atrs.app.c1.MemberRegisterForm,org.springframework.validation.BindingResult,org.springframework.ui.Model)
+date:2017-09-27 18:32:01	thread:main	user:	X-Track:	level:INFO 	logger:o.s.w.s.m.m.a.RequestMappingHandlerMapping      	message:Mapped "{[/member/register],methods=[POST],params=[redo]}" onto public java.lang.String jp.co.ntt.atrs.app.c1.MemberRegisterController.registerRedo(jp.co.ntt.atrs.app.c1.MemberRegisterForm,org.springframework.ui.Model)
+date:2017-09-27 18:32:01	thread:main	user:	X-Track:	level:INFO 	logger:o.s.w.s.m.m.a.RequestMappingHandlerMapping      	message:Mapped "{[/member/register],methods=[GET],params=[form]}" onto public java.lang.String jp.co.ntt.atrs.app.c1.MemberRegisterController.registerForm(org.springframework.ui.Model)
+date:2017-09-27 18:32:01	thread:main	user:	X-Track:	level:INFO 	logger:o.s.w.s.m.m.a.RequestMappingHandlerMapping      	message:Mapped "{[/member/register],methods=[GET],params=[complete]}" onto public java.lang.String jp.co.ntt.atrs.app.c1.MemberRegisterController.registerComplete()
+date:2017-09-27 18:32:01	thread:main	user:	X-Track:	level:INFO 	logger:o.s.w.s.m.m.a.RequestMappingHandlerMapping      	message:Mapped "{[/member/update],methods=[POST]}" onto public java.lang.String jp.co.ntt.atrs.app.c2.MemberUpdateController.update(jp.co.ntt.atrs.app.c2.MemberUpdateForm,org.springframework.validation.BindingResult,org.springframework.ui.Model,org.springframework.web.servlet.mvc.support.RedirectAttributes,java.security.Principal)
+date:2017-09-27 18:32:01	thread:main	user:	X-Track:	level:INFO 	logger:o.s.w.s.m.m.a.RequestMappingHandlerMapping      	message:Mapped "{[/member/update],methods=[GET],params=[form]}" onto public java.lang.String jp.co.ntt.atrs.app.c2.MemberUpdateController.updateForm(org.springframework.ui.Model,java.security.Principal)
+date:2017-09-27 18:32:01	thread:main	user:	X-Track:	level:INFO 	logger:o.s.w.s.m.m.a.RequestMappingHandlerMapping      	message:Mapped "{[/member/update],methods=[POST],params=[redo]}" onto public java.lang.String jp.co.ntt.atrs.app.c2.MemberUpdateController.updateRedo(jp.co.ntt.atrs.app.c2.MemberUpdateForm,org.springframework.ui.Model)
+date:2017-09-27 18:32:01	thread:main	user:	X-Track:	level:INFO 	logger:o.s.w.s.m.m.a.RequestMappingHandlerMapping      	message:Mapped "{[/member/update],methods=[GET],params=[complete]}" onto public java.lang.String jp.co.ntt.atrs.app.c2.MemberUpdateController.updateComplete(org.springframework.ui.Model,java.security.Principal)
+date:2017-09-27 18:32:02	thread:main	user:	X-Track:	level:INFO 	logger:o.s.w.s.m.m.a.RequestMappingHandlerAdapter      	message:Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@448ff1a8: startup date [Wed Sep 27 18:31:56 JST 2017]; root of context hierarchy
+date:2017-09-27 18:32:02	thread:main	user:	X-Track:	level:INFO 	logger:o.s.w.s.m.m.a.RequestMappingHandlerAdapter      	message:Detected @InitBinder methods in globalBindingInitializer
+date:2017-09-27 18:32:02	thread:main	user:	X-Track:	level:INFO 	logger:o.s.w.s.m.m.a.RequestMappingHandlerAdapter      	message:Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@448ff1a8: startup date [Wed Sep 27 18:31:56 JST 2017]; root of context hierarchy
+date:2017-09-27 18:32:02	thread:main	user:	X-Track:	level:INFO 	logger:o.s.w.s.m.m.a.RequestMappingHandlerAdapter      	message:Detected @InitBinder methods in globalBindingInitializer
+date:2017-09-27 18:32:03	thread:main	user:	X-Track:	level:INFO 	logger:o.s.web.servlet.handler.SimpleUrlHandlerMapping 	message:Mapped URL path [/resources/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#0'
+date:2017-09-27 18:32:03	thread:main	user:	X-Track:	level:INFO 	logger:o.s.w.s.m.m.a.RequestMappingHandlerAdapter      	message:Looking for @ControllerAdvice: org.springframework.test.web.servlet.setup.StubWebApplicationContext@1e58512c

@@ -1,6 +1,6 @@
 package jp.co.ntt.atrs.app.c2;
 
-
+import static org.junit.Assert.*;
 import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.print;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
@@ -11,11 +11,8 @@ import java.util.Date;
 import javax.inject.Inject;
 
 import org.junit.Before;
-import org.junit.Rule;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.mockito.junit.MockitoJUnit;
-import org.mockito.junit.MockitoRule;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.test.context.web.WebAppConfiguration;
@@ -24,6 +21,7 @@ import org.springframework.test.web.servlet.ResultActions;
 import org.springframework.test.web.servlet.request.MockHttpServletRequestBuilder;
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
+import org.springframework.web.context.WebApplicationContext;
 
 import jp.co.ntt.atrs.domain.model.CreditType;
 import jp.co.ntt.atrs.domain.model.Gender;
@@ -32,33 +30,26 @@ import jp.co.ntt.atrs.domain.model.Member;
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration({
     "classpath:META-INF/spring/test-context.xml",
-    "classpath:META-INF/spring/test-mvc.xml",
+    "classpath:META-INF/spring/test-mvc-webappsetup.xml",
     "classpath:META-INF/spring/existincodelist-test.xml"})
 @WebAppConfiguration
-public class MemberUpdateControllerTest {
+public class MemberUpdateControllerTestverWebsetup {
 
-    @Rule
-    public MockitoRule mockito = MockitoJUnit.rule();
-    
     @Inject
-    MemberUpdateController target;
+    WebApplicationContext wac;
     
     MockMvc mockMvc;
-    
-    /*
-     * @InjectMockは使用できなかった。（DIコンテナの紐付けをうまく取り込めない・・・？）
-     * モック化が必要な場合は、モッククラスを作成してtargetに埋め込むのがいいか
-     */
     
     @Before
     public void setUp() throws Exception {
         
-        //make mockMvc for testController
-        mockMvc = MockMvcBuilders.standaloneSetup(target).build();
+        //make mockMvc
+        mockMvc = MockMvcBuilders.webAppContextSetup(wac).build();
+        
     }
     
     @Test
-    public void testUpdateForm() throws Exception {
+    public void testUpdateComplete() throws Exception {
         
         Principal principal = new Principal() {
             

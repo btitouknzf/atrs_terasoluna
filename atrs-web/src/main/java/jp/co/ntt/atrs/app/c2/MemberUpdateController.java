@@ -84,10 +84,10 @@ public class MemberUpdateController {
      */
     @RequestMapping(method = RequestMethod.GET, params = "form")
     public String updateForm(Model model, Principal principal) {
-
+        
         // ログインユーザ情報から会員番号を取得
         String membershipNumber = principal.getName();
-
+        
         // 会員情報から会員情報変更フォームを生成し、設定
         Member member = memberUpdateService.findMember(membershipNumber);
         MemberUpdateForm memberUpdateForm = memberHelper.toMemberUpdateForm(member);
@@ -118,7 +118,6 @@ public class MemberUpdateController {
     public String update(@Validated MemberUpdateForm memberUpdateForm,
         BindingResult result, Model model,
         RedirectAttributes redirectAttributes, Principal principal) {
-
         if (result.hasErrors()) {
             // 検証エラーがある場合は画面再表示
             return updateRedo(memberUpdateForm, model);

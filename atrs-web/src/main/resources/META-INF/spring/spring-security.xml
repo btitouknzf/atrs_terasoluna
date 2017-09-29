@@ -50,6 +50,16 @@
   </bean>
 
   <!-- 認証マネージャ -->
+  <!-- 
+  Spring Securityにおける認証処理の設定はAuthenticationProviderとUserDetailsServiceの設定が
+
+  AuthenticationProviderは、次の役割を担う。
+
+  認証に成功した場合、認証ユーザー情報を返却する
+  認証に失敗した場合、例外をスローする
+  UserDetailsServiceは、認証ユーザー情報を永続化層から取得する役割を担う
+  「ユーザーID」と「パスワード」だけで永続化層からデータを取得し、認証するという要件であればこのDaoAuthenticationProviderを使用すれば良い。
+   -->
   <sec:authentication-manager alias="authenticationManager">
     <sec:authentication-provider user-service-ref="atrsUserService">
       <sec:password-encoder ref="passwordEncoder" />

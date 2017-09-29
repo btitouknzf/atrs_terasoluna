@@ -2,6 +2,7 @@ package jp.co.ntt.atrs.domain.repository.member;
 
 import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.CoreMatchers.notNullValue;
+import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertThat;
 
 import javax.inject.Inject;
@@ -47,5 +48,6 @@ public class MemberRepositoryTest {
 		
 		Member actualMember = target.findOneForLogin(membershipNumber);
 		assertThat(actualMember, notNullValue());
+		assertEquals(actualMember, notNullValue());
 	}
 }

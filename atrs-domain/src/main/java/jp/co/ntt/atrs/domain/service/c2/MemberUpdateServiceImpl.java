@@ -47,7 +47,7 @@ public class MemberUpdateServiceImpl implements MemberUpdateService {
     public Member findMember(String membershipNumber) {
 
         Assert.hasText(membershipNumber);
-
+        System.out.println(membershipNumber);
         return memberRepository.findOne(membershipNumber);
     }
 
